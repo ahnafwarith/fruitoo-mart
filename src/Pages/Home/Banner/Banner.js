@@ -39,8 +39,8 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3 className='text-dark'>24/7</h3>
-                        <p className='text-dark'>FRUITS</p>
+                        <h3 className='text-light'>24/7</h3>
+                        <p className='text-light'>FRUITS</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

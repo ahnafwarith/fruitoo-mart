@@ -6,6 +6,9 @@ import Register from './Pages/Login/Register/Register';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Pages/Shared/Header/Header';
 import Footer from './Pages/Shared/Footer/Footer';
+import NotFound from './Pages/Shared/NotFound/NotFound';
+import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
+import ManageProducts from './Pages/ManageProducts/ManageProducts';
 
 function App() {
   return (
@@ -13,8 +16,15 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
+        <Route path="/manageproducts" element={
+          <RequireAuth>
+            <ManageProducts></ManageProducts>
+          </RequireAuth>
+        }></Route>
+        <Route path="/*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
