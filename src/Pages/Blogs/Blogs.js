@@ -1,7 +1,5 @@
 import React from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
-import services from '../../Images/services.png'
-import firebasepic from '../../Images/firebase.png'
 
 const Blogs = () => {
     return (
@@ -10,11 +8,11 @@ const Blogs = () => {
                 {Array.from({ length: 1 }).map((_, idx) => (
                     <Col>
                         <Card>
-                            <Card.Img className='w-50' variant="top" src={firebasepic} />
+                            <Card.Img className='w-50' variant="top" src="" />
                             <Card.Body>
                                 <Card.Title>Difference between javascript and nodejs</Card.Title>
                                 <Card.Text>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, corrupti! Adipisci, iure? Tempora sint repellendus quia, eos consequuntur incidunt unde porro repellat voluptate quisquam sapiente aliquam nobis ratione. Optio, illum!
+                                    JavaScript is a lightweight, cross-platform, interpreted scripting programming language that is primarily used for client-side scripting. It's built into both Java and HTML. On the other hand, Node.js is a server-side scripting language based on the Google Chrome V8 engine.
                                 </Card.Text>
                             </Card.Body>
                         </Card>
@@ -25,11 +23,11 @@ const Blogs = () => {
                 {Array.from({ length: 1 }).map((_, idx) => (
                     <Col>
                         <Card>
-                            <Card.Img variant="top" src={services} />
+                            <Card.Img variant="top" src="" />
                             <Card.Body>
                                 <Card.Title>When should you use nodejs and when should you use mongodb</Card.Title>
                                 <Card.Text>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid maiores harum aperiam doloribus eaque error quas est? Provident expedita excepturi eos veniam, error et nisi amet, veritatis perspiciatis velit eaque?
+                                    Node.js is the language we are using right now to program mongoDB database. Node.js and mongoDB both can be used while building small to medium sized applications. When making applications that require single threads node.js is best. MongoDB shines when data is document-centric
                                 </Card.Text>
                             </Card.Body>
                         </Card>
@@ -40,11 +38,11 @@ const Blogs = () => {
                 {Array.from({ length: 1 }).map((_, idx) => (
                     <Col>
                         <Card>
-                            <Card.Img variant="top" src={services} />
+                            <Card.Img variant="top" src="" />
                             <Card.Body>
                                 <Card.Title>What is the purpose of jwt and how does it work</Card.Title>
                                 <Card.Text>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid maiores harum aperiam doloribus eaque error quas est? Provident expedita excepturi eos veniam, error et nisi amet, veritatis perspiciatis velit eaque?
+                                    JWT is used for security. JSON Web Token -JWT, is used to share security information between a client and a server. Server will create a unique token when client login, and stored to use for authorization.
                                 </Card.Text>
                             </Card.Body>
                         </Card>
