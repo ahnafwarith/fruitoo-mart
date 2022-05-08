@@ -33,20 +33,20 @@ const Register = () => {
     }
     return (
         <div className='register-form'>
-            <h2 className='text-success mt-3 text-center'>Start your healthcare journey with ISHA</h2>
+            <h2 className='text-dark mt-3 text-center'>Register</h2>
             <form onSubmit={makingUser}>
                 <input type="text" name="name" id="" placeholder='Your name' />
                 <input type="email" name="email" id="" placeholder='Your email address' required />
                 <input type="password" name="password" id="" placeholder='Your password' required />
                 <input onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
-                <label className={`ps-3 ${agree ? 'text-success' : 'text-danger'}`} htmlFor="terms">I accept terms and conditions</label>
+                <label className={`ps-3 ${agree ? 'text-primary' : 'text-danger'}`} htmlFor="terms">I accept terms and conditions</label>
                 <input
                     disabled={!agree}
-                    className='w-75 mx-auto btn btn-success mt-2'
+                    className='w-75 mx-auto btn btn-dark mt-2'
                     type="submit"
                     value="Register" />
             </form>
-            <p className='text-center'>Already have an account? <Link to='/login' className='text-success text-decoration-none pe-auto'>Login</Link></p>
+            <p className='text-center'>Already have an account? <Link to='/login' className='text-primary text-decoration-none pe-auto'>Login</Link></p>
             {/* </Form> */}
         </div>
     );

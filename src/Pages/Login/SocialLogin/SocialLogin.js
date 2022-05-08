@@ -22,9 +22,9 @@ const SocialLogin = () => {
         <div className='w-50 mx-auto'>
             {errorMessage}
             <div className='d-flex align-items-center'>
-                <div style={{ height: '2px' }} className='bg-success w-50'></div>
+                <div style={{ height: '2px' }} className='bg-primary w-50'></div>
                 <p className='mt-2 px-2'>Or,</p>
-                <div style={{ height: '2px' }} className='bg-success w-50'></div>
+                <div style={{ height: '2px' }} className='bg-primary w-50'></div>
             </div >
             <button
                 onClick={() => signInWithGoogle()}
