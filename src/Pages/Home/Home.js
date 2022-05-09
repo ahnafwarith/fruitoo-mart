@@ -1,13 +1,22 @@
 import React from 'react';
 import Banner from './Banner/Banner';
-import Inventory from './Inventory/Inventory';
+import GetProducts from '../../CustomHooks/GetProducts';
+import Product from '../Product/Product';
+import './Home.css'
 
 const Home = () => {
+    const [products] = GetProducts()
     return (
         <div>
             <Banner></Banner>
-            <h1 className='text-center text-primary my-3'>Inventory</h1>
-            <Inventory></Inventory>
+            <div id='inventory'>
+                <h1 className='my-4 text-primary text-center'>Products</h1>
+                <div className='cssCard'>
+                    {
+                        products.map(product => <Product key={product.id} product={product}></Product>)
+                    }
+                </div>
+            </div>
         </div>
     );
 };
