@@ -1,7 +1,7 @@
 import React from 'react';
-import Banner from './Banner/Banner';
-import GetProducts from '../../CustomHooks/GetProducts';
-import Product from '../Product/Product';
+import Banner from '../Banner/Banner';
+import GetProducts from '../../../CustomHooks/GetProducts';
+import Product from '../../Product/Product';
 import './Home.css'
 
 const Home = () => {

@@ -5,6 +5,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { signOut } from 'firebase/auth';
 import auth from '../../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import logo from '../../../Images/fruito_logo.png'
 
 const Header = () => {
     const [user] = useAuthState(auth);
@@ -15,12 +16,11 @@ const Header = () => {
         <div>
             <Navbar collapseOnSelect sticky='top' expand="lg">
                 <Container>
-                    <Navbar.Brand as={Link} to="/"><img height={40} src="" alt="" /></Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/"><img height={40} src={logo} alt="" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link href="home#inventory"><span className='link'>Items</span></Nav.Link>
-                            <Nav.Link href="home#reviews"><span className='link'>Reviews</span></Nav.Link>
                         </Nav>
                         <Nav>
                             {
@@ -32,10 +32,10 @@ const Header = () => {
                             }
                             {
                                 user ?
-                                    <button onClick={handleSignOut} className='btn btn-primary me-2 pb-2'>Signout</button>
+                                    <button onClick={handleSignOut} className='btn btn-warning me-2 pb-2'>Log Out</button>
                                     :
                                     <Nav.Link as={Link} to="/login">
-                                        <span className='link'>Sign in</span>
+                                        <span className='link'>Log in</span>
                                     </Nav.Link>
                             }
                             <Nav.Link as={Link} to="/blogs"><span className='link'>Blogs</span></Nav.Link>

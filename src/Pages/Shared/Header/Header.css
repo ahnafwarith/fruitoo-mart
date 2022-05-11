@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #000000bf;
+    background-color: #000000df;
 }
 
 .link {
@@ -9,6 +9,6 @@
 }
 
 .link:hover {
-    color: #2548d5;
-    border-bottom: #2548d5 solid 4px;
+    color: #ff6200;
+    border-bottom: #ff6200 solid 4px;
 }

@@ -25,34 +25,32 @@ const Login = () => {
     const [sendPasswordResetEmail] = useSendPasswordResetEmail(
         auth
     );
-    console.log(emailRef)
     const resetPassword = async () => {
         const email = emailRef.current.value;
         await sendPasswordResetEmail(email);
         toast('Sent email');
     }
-
     const navigate = useNavigate();
     if (user) {
         navigate('/home')
     }
-    let errorMessage;
+    let errorMsg;
     if (error) {
-        errorMessage = <p className='text-danger text-center'>Error: {error?.message}</p>
+        errorMsg = <p className='text-danger text-center'>Error: {error?.message}</p>
     }
     if (loading) {
         return <Loading></Loading>
     }
     return (
         <div className='login-form'>
-            <h2 className='text-dark mt-3 text-center'>Login</h2>
-            {errorMessage}
+            <h2 className='text-warning mt-3 text-center'>Login</h2>
+            {errorMsg}
             <form onSubmit={handleLogin} className='mt-4 w-50 mx-auto'>
                 <input type="email" ref={emailRef} name="email" id="" placeholder='Your email address' required />
                 <input type="password" name="password" id="" placeholder='Your password' required />
-                <input className='w-75 mx-auto btn btn-dark mt-2' type="submit" value="Login" />
-                <p className='text-center'>New? <Link to='/register' className='text-primary text-decoration-none pe-auto'>Register</Link></p>
-                <p className='text-center'>Did you forget your password? <button className='btn btn-link text-primary text-decoration-none pe-2' onClick={resetPassword}>Reset Password</button></p>
+                <input className='w-75 mx-auto btn btn-warning mt-2' type="submit" value="Login" />
+                <p className='text-center'>New? <Link to='/register' className='text-success text-decoration-none pe-auto'>Register</Link></p>
+                <p className='text-center'>Did you forget your password? <button className='btn btn-link text-success text-decoration-none pe-2' onClick={resetPassword}>Reset Password</button></p>
             </form>
             <SocialLogin></SocialLogin>
             <ToastContainer />

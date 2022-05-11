@@ -15,7 +15,7 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3 className='text-light'>Welcome</h3>
+                        <h3 className='text-dark'>Welcome</h3>
                         <p className='text-dark'>Back!</p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -27,8 +27,7 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3 className='text-dark'>Best Fruits</h3>
-                        <p className='text-dark'>Always</p>
+                        <h3 className='text-dark'>The Best <span className='text-light'>Fruits</span></h3>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
