@@ -18,12 +18,12 @@ const ManageProducts = () => {
         }
     }
     return (
-        <div className='w-50 mx-auto'>
-            <h3>Delete some Products</h3>
+        <div className='text-center'>
+            <h3>Delete some <span className='text-warning'>Products</span></h3>
             {
                 Products.map(
-                    product => <div key={product._id}>
-                        <h5>{product.name}<button onClick={() => handleDelete(product._id)}>Delete</button></h5></div>
+                    product => <div className='text-center' key={product._id}>
+                        <h5 className='m-1'>{product.name}<button className='btn btn-danger m-1' onClick={() => handleDelete(product._id)}>Delete</button></h5></div>
                 )
             }
         </div>

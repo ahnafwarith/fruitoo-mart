@@ -11,6 +11,8 @@ import Delete from './Pages/Delete/Delete';
 import Blogs from './Pages/Blogs/Blogs';
 import Inventory from './Pages/Inventory/Inventory';
 import Home from './Pages/Home/Home/Home';
+import InventoryItem from './Pages/InventoryItem/InventoryItem';
+import AddItem from './Pages/AddItem/AddItem';
 
 function App() {
   return (
@@ -20,12 +22,18 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/inventory" element={<Inventory></Inventory>} />
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
-        <Route path="blogs" element={<Blogs />} />
+        <Route path="/inventory/:id" element={<InventoryItem></InventoryItem>} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/blogs" element={<Blogs />} />
         <Route path="/delete" element={
           <RequireAuth>
             <Delete></Delete>
+          </RequireAuth>
+        }></Route>
+        <Route path="/add" element={
+          <RequireAuth>
+            <AddItem></AddItem>
           </RequireAuth>
         }></Route>
         <Route path="/*" element={<NotFound></NotFound>}></Route>
