@@ -3,6 +3,8 @@ import Banner from '../Banner/Banner';
 import GetProducts from '../../../CustomHooks/GetProducts';
 import Product from '../../Product/Product';
 import './Home.css'
+import TeamInfo from '../../TeamInfo/TeamInfo';
+import About from '../../About/About'
 
 const Home = () => {
     const [products] = GetProducts()
@@ -10,13 +12,15 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <div id='inventory'>
-                <h1 className='my-4 text-primary text-center'>Products</h1>
+                <h1 className='my-4 text-warning text-center'>Products</h1>
                 <div className='cssCard'>
                     {
-                        products.map(product => <Product key={product.id} product={product}></Product>)
+                        products.slice(0, 6).map(product => <Product key={product.id} product={product}></Product>)
                     }
                 </div>
             </div>
+            <TeamInfo></TeamInfo>
+            <About></About>
         </div>
     );
 };

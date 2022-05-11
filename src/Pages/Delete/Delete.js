@@ -18,7 +18,7 @@ const ManageProducts = () => {
         }
     }
     return (
-        <div className='text-center'>
+        <div className='text-center mb-5'>
             <h3>Delete some <span className='text-warning'>Products</span></h3>
             {
                 Products.map(
