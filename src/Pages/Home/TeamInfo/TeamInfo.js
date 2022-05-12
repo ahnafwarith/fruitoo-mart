@@ -1,7 +1,7 @@
 import React from 'react';
-import p1 from '../../Images/p1.jpg'
-import p2 from '../../Images/p2.jpg'
-import p3 from '../../Images/p3.jpg'
+import p1 from '../../../Images/p1.jpg'
+import p2 from '../../../Images/p2.jpg'
+import p3 from '../../../Images/p3.jpg'
 
 const TeamInfo = () => {
     return (

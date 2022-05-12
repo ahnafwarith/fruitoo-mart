@@ -1,5 +1,5 @@
 import React from 'react';
-import backG from '../../Images/custom.jpg'
+import backG from '../../../Images/custom.jpg'
 
 const About = () => {
     return (

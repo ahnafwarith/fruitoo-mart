@@ -3,8 +3,8 @@ import Banner from '../Banner/Banner';
 import GetProducts from '../../../CustomHooks/GetProducts';
 import Product from '../../Product/Product';
 import './Home.css'
-import TeamInfo from '../../TeamInfo/TeamInfo';
-import About from '../../About/About'
+import TeamInfo from '../../Home/TeamInfo/TeamInfo';
+import About from '../../Home/About/About'
 
 const Home = () => {
     const [products] = GetProducts()

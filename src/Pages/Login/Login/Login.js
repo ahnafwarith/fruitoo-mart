@@ -49,8 +49,8 @@ const Login = () => {
                 <input type="email" ref={emailRef} name="email" id="" placeholder='Your email address' required />
                 <input type="password" name="password" id="" placeholder='Your password' required />
                 <input className='w-75 mx-auto btn btn-dark text-warning mt-2' type="submit" value="Login" />
-                <p className='text-center'>New? <Link to='/register' className='text-success text-decoration-none pe-auto'>Register</Link></p>
-                <p className='text-center'>Did you forget your password? <button className='btn btn-link text-success text-decoration-none pe-2' onClick={resetPassword}>Reset Password</button></p>
+                <p className='text-center mt-1'>New? <Link to='/register' className='text-success text-decoration-none pe-auto ms-2'>Register</Link></p>
+                <p className='text-center mt-2'>Did you forget your password? <button className='btn btn-link text-success text-decoration-none mb-1' onClick={resetPassword}>Reset Password</button></p>
             </form>
             <SocialLogin></SocialLogin>
             <ToastContainer />
