@@ -1,8 +1,9 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import toast, { Toaster } from 'react-hot-toast';
 
 const AddItem = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         fetch('https://warm-island-53330.herokuapp.com/inventory', {
             method: 'POST',
@@ -15,6 +16,7 @@ const AddItem = () => {
             .then(result => {
                 console.log(result)
             })
+        toast.success('Item added successfully')
     };
 
     return (
@@ -29,6 +31,7 @@ const AddItem = () => {
                 <input className='mb-2' placeholder='quantity' type='number' {...register("quantity")} />
                 <input className='btn-warning' type="submit" value="Add Item" />
             </form>
+            <Toaster />
         </div>
     );
 };

@@ -12,7 +12,7 @@ const InventoryItem = () => {
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [id, update]);
-    const { name, quantity, img, description } = product
+    const { name, quantity, img, description, price } = product
     const handlePlus = e => {
         e.preventDefault()
         const newQuantity = parseInt(e.target.quantity.value);
@@ -21,7 +21,7 @@ const InventoryItem = () => {
             return newQuantity;
         }
         const updateQuantity = parseInt(quantity) + newQuantity
-        const url = `http://localhost:5000/inventory/${id}`
+        const url = `https://warm-island-53330.herokuapp.com/inventory/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -63,14 +63,15 @@ const InventoryItem = () => {
                 <h4 className='mx-3'>Item ID: {id}</h4>
                 <h4 className='mx-3'>Name: {name}</h4>
                 <h4 className='mx-3'>{description}</h4>
+                <h4 className='mx-3'>Price: {price}</h4>
             </div>
             <div>
                 <h4 className='mx-3'>Quantity: {quantity === 0 ? <span className='text-danger fw-bold'>Sold Out</span> : quantity}</h4>
                 <form onSubmit={handlePlus}>
                     <input type="number" name="quantity" />
-                    <input className='btn btn-success' type="submit" value="Submit" />
+                    <input className='btn btn-success ms-2' type="submit" value="Submit" />
                 </form>
-                <button onClick={handleMinus} className='mx-3 my-3 btn btn-danger'>Delivered</button>
+                <button onClick={handleMinus} className='mx-3 mb-3 btn btn-danger'>Delivered</button>
             </div>
             <Toaster />
         </div>
