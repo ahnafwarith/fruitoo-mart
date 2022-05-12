@@ -42,13 +42,13 @@ const Login = () => {
         return <Loading></Loading>
     }
     return (
-        <div className='login-form'>
-            <h2 className='text-warning mt-3 text-center'>Login</h2>
+        <div className='login-form mb-5'>
+            <h2 className='mt-3 text-center'>L<span className='text-warning '>o</span>gin</h2>
             {errorMsg}
             <form onSubmit={handleLogin} className='mt-4 w-50 mx-auto'>
                 <input type="email" ref={emailRef} name="email" id="" placeholder='Your email address' required />
                 <input type="password" name="password" id="" placeholder='Your password' required />
-                <input className='w-75 mx-auto btn btn-warning mt-2' type="submit" value="Login" />
+                <input className='w-75 mx-auto btn btn-dark text-warning mt-2' type="submit" value="Login" />
                 <p className='text-center'>New? <Link to='/register' className='text-success text-decoration-none pe-auto'>Register</Link></p>
                 <p className='text-center'>Did you forget your password? <button className='btn btn-link text-success text-decoration-none pe-2' onClick={resetPassword}>Reset Password</button></p>
             </form>

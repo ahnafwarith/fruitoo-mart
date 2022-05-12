@@ -6,9 +6,19 @@ const InventoryItem = () => {
     const { id } = useParams();
     const [product] = getSingleProduct(id);
     const { name, quantity, img, description } = product
-    const handlePlus = () => {
-
-    }
+    const handlePlus = data => {
+        fetch(`http://localhost:5000/inventory/${id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result)
+            })
+    };
     const handleMinus = () => {
 
     }

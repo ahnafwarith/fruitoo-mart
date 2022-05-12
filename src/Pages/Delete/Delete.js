@@ -6,7 +6,7 @@ const ManageProducts = () => {
     const handleDelete = (id) => {
         const continuing = window.confirm("Are you sure you want to delete?")
         if (continuing) {
-            const url = `http://localhost:5000/inventory/${id}`;
+            const url = `https://warm-island-53330.herokuapp.com/inventory/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
