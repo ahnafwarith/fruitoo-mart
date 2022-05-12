@@ -17,7 +17,7 @@ const Product = ({ product }) => {
                 <p className='text-center'>{description}</p>
                 <p className='text-center'>Price: {price} taka</p>
                 <p className='text-center'>{supplier_name}</p>
-                <h3 className='text-center'>In stock: {quantity}</h3>
+                <h5 className='text-center'>In stock: {quantity === 0 ? <span className='text-danger fw-bold'>Sold Out</span> : quantity}</h5>
                 <button onClick={() => redirectToProduct(_id)} className='btn btn-warning mx-auto d-block w-50 my-2'>Update</button>
             </div>
         </div >
