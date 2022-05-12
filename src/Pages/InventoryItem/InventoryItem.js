@@ -42,7 +42,7 @@ const InventoryItem = () => {
             toast.error('Item is not in stock');
             return updateQuantity;
         }
-        const url = `http://localhost:5000/inventory/${id}`
+        const url = `https://warm-island-53330.herokuapp.com/inventory/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {
